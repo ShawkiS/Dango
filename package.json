@@ -1,0 +1,36 @@
+{
+  "name": "dango",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build:es5": "rm -rf ./lib; ./node_modules/.bin/babel src --out-dir lib",
+    "build:example": "rm -rf ./example/my-app/node_modules/dango; ./node_modules/.bin/babel src --out-dir ./example/my-app/node_modules/dango",
+    "build:iframe": "rm -rf ./iframe/node_modules/dango; ./node_modules/.bin/babel src --out-dir ./iframe/node_modules/dango",
+    "build": "npm run build:es5; npm run build:example;npm run build:iframe;"
+  },
+  "author": "Shawki Sukkar",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.1.2",
+    "axios": "^0.27.2",
+    "localforage": "^1.10.0",
+    "postmsg-rpc": "^2.4.0",
+    "url-parse": "^1.4.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "standard": "^12.0.1"
+  }
+}
